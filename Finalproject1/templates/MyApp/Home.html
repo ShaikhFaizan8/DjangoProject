@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+{% extends 'MyApp/base.html' %}
+{% block body_block %}
+  <style type="text/css">
+   .card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+.myCard {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+<!--imag-->
+
+  </style>
+<body>
+ <form action="" method="post">
+        {% csrf_token %}
+<center xmlns="http://www.w3.org/1999/html">
+
+<h1 style=color:coral;>Welcome to Vip Institute....!!</h1>
+ <h1><font style="font-weight: bold;font-family: 'Lucida Console';"</font>Be a Good Programmer</h1>
+ <h2>Programming Training Institute since 2012<br>
+Open today until 12:30 PM</h2>
+ <img src="https://storage.googleapis.com/pai-images/05422f13e43d46b981baa757b70668f0.jpeg">
+ <br>
+ <br>
+ <div class="card">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+  <div class="card__content">
+    <p class="card__title">Vip Institute</p>
+    <p class="card__description">PROGRAMMING TRAINING INSTITUTE
+C, Cpp, DS, Java, Python, .Net, Web Desinging, AutoCAD, Catia, 3 Ds Max</p>
+  </div>
+</div>
+ <br>
+ <br>
+ <div class="image-container">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPtgUBimdmTqZyMUwV4J1JetpHLaTANMh_G94i2=w960-h960-n-o-v1" alt="Image 1" style="width: 350px; height: auto;">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipOBkkBil3yMUEPGkQ8yK3PhytBWhmfbBMey4XEl=w960-h960-n-o-v1" alt="Image 2" style="width: 350px; height: auto;">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMUSt8DTlaR6rXJ1eja8Ehqno5KyovvMfePMPnD=w960-h960-n-o-v1" alt="Image 3" style="width: 350px; height: auto;">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipP0xD3CB83zLgS3OWDv0BEZTLq1G6OEK87H20wC=w960-h960-n-o-v1" alt="Image 4" style="width: 350px; height: auto;">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipOvpFMAfDG3DR89-c1U3UH71rR6zjRbDniH_ty6=w960-h960-n-o-v1" alt="Image 4" style="width: 350px; height: auto;">
+        <img src="https://wallpapercave.com/wp/wp4923985.png" alt="Image 4" style="width: 350px; height:350px;">
+ </div>
+<br>
+ <br>
+  <div class="book">
+    <p>Mon:	6:00 AM – 8:00 PM<br>
+Tue:	6:00 AM – 8:00 PM<br>
+Wed:	6:00 AM – 8:00 PM<br>
+Thu:	6:00 AM – 8:00 PM<br>
+Fri:	6:00 AM – 8:00 PM<br>
+Sat:	7:00 AM – 8:00 PM<br>
+Sun:	7:00 AM – 12:30 PM<br></p>
+    <div class="cover">
+        <p>Business Hours</p>
+    </div>
+   </div>
+ <br>
+ <br>
+
+ </center>
+
+</body>
+{% endblock %}

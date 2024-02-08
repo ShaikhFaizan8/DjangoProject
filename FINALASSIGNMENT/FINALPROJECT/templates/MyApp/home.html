@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .hero{
+    background-image: url('https://img.freepik.com/free-photo/modern-office-design-with-computer-equipment-inside-generated-by-ai_188544-22422.jpg?t=st=1705226960~exp=1705230560~hmac=b99af4b82c4665979149641d351b3271f6782caba13f8d1bed540d7872adee1e&w=826');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color:#fff;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0px;
+  z-index: -2;
+}
+
+
+
+
+        hr {
+    border: 1px solid #ccc; /* Specify the border style */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+
+
+
+
+.hero::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1{
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.content h2, .content h3{
+  font-size: 150%;
+  margin: 20px 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.hero::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1{
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.content h2, .content h3{
+  font-size: 150%;
+  margin: 20px 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero h1{
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.content h2, .content h3{
+  font-size: 150%;
+  margin: 20px 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+        {
+      font-size: 18px;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #333; /* Adjust the border color as needed */
+    }
+
+
+
+
+
+    </style>
+    {% extends 'MyApp/base.html' %}
+{% block body_block %}
+    <title>Title</title>
+</head>
+<body bgcolor="#212121">
+<h1>
+<div id="typing-text"></div>
+
+  <script>
+    const textToType = "WELCOME TO MY WEBSITE ......";
+    const typingSpeed = 159; // Adjust the typing speed (in milliseconds)
+
+    let index = 0;
+    const typingDiv = document.getElementById('typing-text');
+
+    function typeText() {
+      typingDiv.textContent = textToType.slice(0, index);
+      index++;
+
+      if (index <= textToType.length) {
+        setTimeout(typeText, typingSpeed);
+      }
+    }
+
+    // Start typing when the page loads
+    window.onload = function() {
+      typeText();
+    };
+  </script>
+    </h1>
+
+    <h2><font color="#778899"  style="text-decoration: overline">THIS WEB SITE CREATED BY NAWAZ SHIAKH,...... </font> </h2></p>
+<br>
+
+{% endblock %}
+</body>
+</html>

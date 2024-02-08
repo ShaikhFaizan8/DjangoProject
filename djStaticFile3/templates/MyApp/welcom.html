@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/myfile.css'%}" rel="stylesheet">
+</head>
+<body>
+<h1> WELCOME TO DJANGO</h1>
+{{wish}}
+<marquee scrollamount="30" onmouseover="this.stop()" onmouseout="this.start()">
+ <img src="{%static 'images/hello.png'%}">
+    </marquee>
+</body>
+</html>

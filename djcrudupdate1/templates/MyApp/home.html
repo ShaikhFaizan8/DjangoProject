@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crude update operation</title>
+</head>
+<body>
+    <a href="{% url 'home'%}">Companies List</a><br>
+    <a href="/create/">AddNewPic</a><br>
+    {% for obj in orglist %}
+      <a href="{{obj.get_absolute_url}}"><br>{{obj.id}}.{{obj.company_name}}
+      {% if obj.company_logo %}<br> <img src="{{obj.company_logo.url}}"/><br>{% endif %}</a>
+    <a href="{% url 'update' id=obj.id %}">Update</a><br>
+    {% endfor %}
+</body>
+</html>

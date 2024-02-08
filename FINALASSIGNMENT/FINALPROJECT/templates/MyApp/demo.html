@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link href="{%static 'css/MyFile.css'%" rel="stylesheet">
+
+
+    <style type="text/css">
+        .hero{
+    background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color:#fff;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+
+.hero::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1{
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.content h2, .content h3{
+  font-size: 150%;
+  margin: 20px 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+ body {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+    {% extends 'MyApp/base.html' %}
+{% block body_block %}
+    <title>Title</title>
+</head>
+<body>
+<marquee>
+<h1>This Is Our Class Courses</h1>
+    </marquee>
+
+
+
+<form method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+ <br>
+   <button type="submit" class="btn btn-primary">S</button>
+</form>
+
+
+
+ <p id="dynamicText">This is some dynamic text: <span id="placeholder">hello </span></p>
+
+<center>
+
+
+</form>
+</center>
+
+</body>
+
+<marquee>
+
+<img src="https://img.freepik.com/premium-psd/elearning-online-class-course-education-banner-facebook-horizontal-web-ads-banner-template-psd_731801-141.jpg?w=740" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-psd/horizontal-banner-template-professional-business-solutions_23-2149024787.jpg?w=740&t=st=1705204944~exp=1705205544~hmac=273dd458e60d717c934d141109756ebccfa8ce78f3d839f6c0217053d2c94818" class="center" alt="Cinque Terre" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-vector/slide-page-with-computer-business-people-working-computer_1262-18963.jpg?w=740&t=st=1705205887~exp=1705206487~hmac=664dc8e336d98015654422dc032aa8c673cf35df6fdd18525690c65e3e87c634" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/premium-psd/psd-elearning-online-class-course-education-web-banner-youtube-thumbnail_673898-875.jpg?w=740" alt="right" class="right" height="300px" width="500px" border="black">
+
+</marquee>
+
+{% endblock %}
+</html>
+
+<img src="https://img.freepik.com/premium-psd/elearning-online-class-course-education-banner-facebook-horizontal-web-ads-banner-template-psd_731801-141.jpg?w=740" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-psd/horizontal-banner-template-professional-business-solutions_23-2149024787.jpg?w=740&t=st=1705204944~exp=1705205544~hmac=273dd458e60d717c934d141109756ebccfa8ce78f3d839f6c0217053d2c94818" class="center" alt="Cinque Terre" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-vector/slide-page-with-computer-business-people-working-computer_1262-18963.jpg?w=740&t=st=1705205887~exp=1705206487~hmac=664dc8e336d98015654422dc032aa8c673cf35df6fdd18525690c65e3e87c634" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/premium-psd/psd-elearning-online-class-course-education-web-banner-youtube-thumbnail_673898-875.jpg?w=740" alt="right" class="right" height="300px" width="500px" border="black">
+
+
+
+
+

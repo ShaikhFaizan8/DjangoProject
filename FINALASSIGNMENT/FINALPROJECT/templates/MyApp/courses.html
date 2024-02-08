@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <link href="{%static 'css/MyFile.css'%" rel="stylesheet">
+<style type="text/css">
+
+ .hero{
+    background-image: url('https://img.freepik.com/free-photo/3d-rendering-modern-workspace-with-computer-mouse-dark-background_1142-41729.jpg?t=st=1705224960~exp=1705228560~hmac=411c37ca6b935d3bc4e76b106fb0862e43af254b0ff4a2744f00f03ee47653cb&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height:100vh;
+  color:#fff;
+  display: flex;
+
+}
+
+
+
+ button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+
+
+</style>
+
+    {% extends 'MyApp/base.html' %}
+{% block body_block %}
+
+    </head>
+<body bgcolor="#3F5CA4">
+<br>
+<br>
+<marquee><h1>!!!!!!!APPLY NOW 35% DISCOUNT!!!!!</h1></marquee>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<center>
+   <form method="post" >
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+<br>
+       <br>
+       <br>
+
+       <a href="MyApp/thanks.html">
+  <button type="submit" class="btn btn-primary">SAVE</button></a>
+</form>
+</center> <right><marquee direction="up">
+<img src="https://images.careerindia.com/hi/img/2022/08/best10joborientedcoursesinindiacollegesandfees-1661248561.jpg" alt="Left Fixed Image" class="left-fixed-image" height="290px" width="400px" border="black">
+</marquee>
+    <br>
+<br>
+<br>
+<marquee>
+<img src="https://img.freepik.com/premium-psd/elearning-online-class-course-education-banner-facebook-horizontal-web-ads-banner-template-psd_731801-141.jpg?w=740" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-psd/horizontal-banner-template-professional-business-solutions_23-2149024787.jpg?w=740&t=st=1705204944~exp=1705205544~hmac=273dd458e60d717c934d141109756ebccfa8ce78f3d839f6c0217053d2c94818" class="center" alt="Cinque Terre" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-vector/slide-page-with-computer-business-people-working-computer_1262-18963.jpg?w=740&t=st=1705205887~exp=1705206487~hmac=664dc8e336d98015654422dc032aa8c673cf35df6fdd18525690c65e3e87c634" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/premium-psd/psd-elearning-online-class-course-education-web-banner-youtube-thumbnail_673898-875.jpg?w=740" alt="right" class="right" height="300px" width="500px" border="black">
+
+
+    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010136.jpg?w=740&t=st=1705222191~exp=1705222791~hmac=5d0bc25a895353c4c15e37529e5862652a1cf5ce57e7f05709c9f88a7f313a27" class="center" alt="Cinque Terre" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg?w=740&t=st=1705222226~exp=1705222826~hmac=304d59b16c3caa71d7423c94cb310d6c944732ba9ad79d5687f15353f945473e" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/premium-photo/it-industry-modern-technologies-man-holding-open-palms_438099-7034.jpg?w=740" alt="right" class="right" height="300px" width="500px" border="black">
+
+
+    <img src="https://img.freepik.com/free-vector/digital-technology-face-artificial-intelligence_1017-21770.jpg?w=740&t=st=1705222453~exp=1705223053~hmac=42bda12e3b49efbfaebf1936d95859683a0dedabe91affda07737679e00e0d1c" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-photo/design-agency-worker_1163-1432.jpg?w=740&t=st=1705222520~exp=1705223120~hmac=61e762863b03033ac3931e97b6246874bee68513c68c815c863a3902a7765fb0" class="center" alt="Cinque Terre" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/free-vector/illustration-social-media-concept_53876-17855.jpg?w=740&t=st=1705222634~exp=1705223234~hmac=2a8435e1f2f5ad8d1990c50a28877ef08be26677c8cbcf5fb2dc85d8fc5d8399" alt="Left Fixed Image" class="left-fixed-image" height="300px" width="500px" border="black">
+
+<img src="https://img.freepik.com/premium-photo/businessman-protecting-data-personal-information-cyber-security-data-concept-padlock-internet-technology_117255-1902.jpg?w=826" alt="right" class="right" height="300px" width="500px" border="black">
+
+
+</marquee>
+
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>HomePage_CRUD_OPERATIONS</title>
+    </head>
+    <body>
+        <a href="{% url 'home' %}"> Companies List </a>
+            <a href="/create/">AddNewPic</a><br>
+             {% for obj in orglist %}
+                <a href="{{ obj.get_absolute_url }}"> {{ obj.id }}.{{ obj.company_name }}
+                {% if obj.company_logo %} <img src='{{obj.company_logo.url}}'/>
+                {% endif %} </a>
+            {% endfor %}
+    </body>
+</html>

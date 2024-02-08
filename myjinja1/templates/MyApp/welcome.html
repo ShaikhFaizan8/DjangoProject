@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{%static 'css/mycss.css'%}" rel="stylesheet">
+</head>
+<body>
+<h1 id="keyframes"> HELLO HOW ARE YOU</h1>
+<h2>
+    {{name}}
+    {{surname}}</h2>
+<marquee scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()">
+<img src="{%static 'images/hello.png'%}" width="100px">
+    </marquee>
+
+</body>
+</html>

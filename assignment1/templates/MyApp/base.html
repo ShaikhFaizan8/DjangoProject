@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/myfile.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body style="background:lightcyan">
+
+
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Vip Institute</a>
+    </div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+        <li><a href="/Services">Services</a></li>
+        <li><a href="/AboutUs">About Us</a></li>
+        <li><a href="/Contact">Contact</a></li>
+      </ul>
+
+  </div>
+</nav>
+<div class="container text-right">
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+
+
+</div>
+
+
+
+
+
+{% block body_block %}
+{% endblock %}
+
+
+</body>
+</html>

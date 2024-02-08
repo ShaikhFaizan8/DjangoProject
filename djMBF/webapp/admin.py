@@ -1,0 +1,7 @@
+from django.contrib import admin
+from webapp.models import Emp
+
+# Register your models here.
+class EmpAdmin(admin.ModelAdmin):
+    list_display = ['Eid','Name','Salary','Location','Position']
+admin.site.register(Emp,EmpAdmin)
